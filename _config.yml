@@ -115,7 +115,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Zoltán Szombathy"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "AI & LLM Engineer, data science enthusiast,"
   location         : "Hungary / Serbia"
