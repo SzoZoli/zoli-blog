@@ -7,7 +7,7 @@ author_profile: false
 
 # Solutions
 
-AI-driven and analytical solutions:
+AI-driven and analytical solutions & demos:
 
 - [Market Sentiment Analysis](/zoli-blog/market-sentiment-analysis/)
 - [AI for Tourism](/zoli-blog/ai-for-tourism/)
