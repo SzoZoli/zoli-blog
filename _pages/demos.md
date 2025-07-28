@@ -9,6 +9,6 @@ author_profile: false
 
 Explore interactive case studies and demo projects:
 
-- [Market Sentiment Analyzer](/market-sentiment-analyzer/)
-- [Crypto Dashboard](/crypto-dashboard/)
-- [Competitor Analysis](/competitor-analysis/)
+- [Market Sentiment Analyzer](/zoli-blog/market-sentiment-analyzer/)
+- [Crypto Dashboard](/zoli-blog/crypto-dashboard/)
+- [Competitor Analysis](/zoli-blog/competitor-analysis/)
