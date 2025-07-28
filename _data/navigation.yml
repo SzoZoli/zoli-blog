@@ -1,6 +1,7 @@
 main:
   - title: "Home"
-    url: /  # vagy /zoli-blog/ helyett /
+    url: /
+
   - title: "Blog & News"
     url: /blog-news/
     children:
@@ -10,6 +11,7 @@ main:
         url: /bitcoin-crypto-weekly/
       - title: "Competitor Analysis"
         url: /competitor-analysis/
+
   - title: "References"
     url: /references/
     children:
@@ -17,6 +19,7 @@ main:
         url: /references/
       - title: "Company Detail"
         url: /company-detail/
+
   - title: "Demos / Case Studies"
     url: /demos/
     children:
@@ -26,9 +29,18 @@ main:
         url: /crypto-dashboard/
       - title: "Competitor Analysis"
         url: /competitor-analysis/
+
   - title: "Solutions"
     url: /solutions/
     children:
       - title: "Market Sentiment Analysis"
         url: /market-sentiment-analysis/
-      # stb...
+      - title: "AI for Tourism"
+        url: /ai-for-tourism/
+      - title: "AI Maturity Assessment"
+        url: /ai-maturity-assessment/
+      - title: "Decision Support Systems"
+        url: /decision-support-systems/
+      - title: "Generative Simulation / RAG Solutions"
+        url: /rag-solutions/
+
