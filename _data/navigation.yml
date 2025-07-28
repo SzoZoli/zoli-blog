@@ -5,37 +5,37 @@ main:
     url: /blog-news/
     children:
       - title: "AI Weekly"
-        url: /ai-weekly/
+        url: /zoli-blog/ai-weekly/
       - title: "Bitcoin & Crypto Weekly"
-        url: /bitcoin-crypto-weekly/
+        url: /zoli-blog/bitcoin-crypto-weekly/
       - title: "Competitor Analysis"
-        url: /competitor-analysis/
+        url: /zoli-blog/competitor-analysis/
   - title: "References"
     url: /references/
     children:
       - title: "Companies & Collaborations"
-        url: /references/
+        url: /zoli-blog/references/
       - title: "Company Detail"
-        url: /company-detail/
+        url: /zoli-blog/company-detail/
   - title: "Demos / Case Studies"
     url: /demos/
     children:
       - title: "Market Sentiment Analyzer"
-        url: /market-sentiment-analyzer/
+        url: /zoli-blog/market-sentiment-analyzer/
       - title: "Crypto Dashboard"
-        url: /crypto-dashboard/
+        url: /zoli-blog/crypto-dashboard/
       - title: "Competitor Analysis"
-        url: /competitor-analysis/
+        url: /zoli-blog/competitor-analysis/
   - title: "Solutions"
     url: /solutions/
     children:
       - title: "Market Sentiment Analysis"
-        url: /market-sentiment-analysis/
+        url: /zoli-blog/market-sentiment-analysis/
       - title: "AI for Tourism"
-        url: /ai-for-tourism/
+        url: /zoli-blog/ai-for-tourism/
       - title: "AI Maturity Assessment"
-        url: /ai-maturity-assessment/
+        url: /zoli-blog/ai-maturity-assessment/
       - title: "Decision Support Systems"
-        url: /decision-support-systems/
+        url: /zoli-blog/decision-support-systems/
       - title: "Generative Simulation / RAG Solutions"
-        url: /rag-solutions/
+        url: /zoli-blog/rag-solutions/
