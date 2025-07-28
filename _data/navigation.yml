@@ -1,42 +1,34 @@
 main:
   - title: "Home"
-    url: /zoli-blog/
+    url: /  # vagy /zoli-blog/ helyett /
   - title: "Blog & News"
-    url: /zoli-blog/blog-news/
+    url: /blog-news/
     children:
       - title: "AI Weekly"
-        url: /zoli-blog/ai-weekly/
+        url: /ai-weekly/
       - title: "Bitcoin & Crypto Weekly"
-        url: /zoli-blog/bitcoin-crypto-weekly/
+        url: /bitcoin-crypto-weekly/
       - title: "Competitor Analysis"
-        url: /zoli-blog/competitor-analysis/
+        url: /competitor-analysis/
   - title: "References"
-    url: /zoli-blog/references/
+    url: /references/
     children:
       - title: "Companies & Collaborations"
-        url: /zoli-blog/references/
+        url: /references/
       - title: "Company Detail"
-        url: /zoli-blog/company-detail/
+        url: /company-detail/
   - title: "Demos / Case Studies"
-    url: /zoli-blog/demos/
+    url: /demos/
     children:
       - title: "Market Sentiment Analyzer"
-        url: /zoli-blog/market-sentiment-analyzer/
+        url: /market-sentiment-analyzer/
       - title: "Crypto Dashboard"
-        url: /zoli-blog/crypto-dashboard/
+        url: /crypto-dashboard/
       - title: "Competitor Analysis"
-        url: /zoli-blog/competitor-analysis/
+        url: /competitor-analysis/
   - title: "Solutions"
-    url: /zoli-blog/solutions/
+    url: /solutions/
     children:
       - title: "Market Sentiment Analysis"
-        url: /zoli-blog/market-sentiment-analysis/
-      - title: "AI for Tourism"
-        url: /zoli-blog/ai-for-tourism/
-      - title: "AI Maturity Assessment"
-        url: /zoli-blog/ai-maturity-assessment/
-      - title: "Decision Support Systems"
-        url: /zoli-blog/decision-support-systems/
-      - title: "Generative Simulation / RAG Solutions"
-        url: /zoli-blog/rag-solutions/
-
+        url: /market-sentiment-analysis/
+      # stb...
