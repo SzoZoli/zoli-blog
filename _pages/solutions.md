@@ -9,8 +9,8 @@ author_profile: false
 
 AI-driven and analytical solutions:
 
-- [Market Sentiment Analysis](/market-sentiment-analysis/)
-- [AI for Tourism](/ai-for-tourism/)
-- [AI Maturity Assessment](/ai-maturity-assessment/)
-- [Decision Support Systems](/decision-support-systems/)
-- [Generative Simulation / RAG Solutions](/rag-solutions/)
+- [Market Sentiment Analysis](/zoli-blog/market-sentiment-analysis/)
+- [AI for Tourism](/zoli-blog/ai-for-tourism/)
+- [AI Maturity Assessment](/zoli-blog/ai-maturity-assessment/)
+- [Decision Support Systems](/zoli-blog/decision-support-systems/)
+- [Generative Simulation / RAG Solutions](/zoli-blog/rag-solutions/)
