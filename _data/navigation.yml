@@ -2,7 +2,7 @@
 main:
   - title: "Home"
     url: /
-  - title: "Blog / News"
+  - title: "Blog & News"
     children:
       - title: "AI Weekly"
         url: /ai-weekly/
