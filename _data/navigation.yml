@@ -1,14 +1,38 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  - title: "Competitor Analysis"
-    url: /competitor-analysis/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "Home"
+    url: /
+  - title: "Blog / News"
+    children:
+      - title: "AI Weekly"
+        url: /ai-weekly/
+      - title: "Bitcoin & Crypto Weekly"
+        url: /bitcoin-crypto-weekly/
+      - title: "Competitor Analysis"
+        url: /competitor-analysis/
+  - title: "References"
+    children:
+      - title: "Companies & Collaborations"
+        url: /references/
+      - title: "Company Detail"
+        url: /company-detail/
+  - title: "Demos / Case Studies"
+    children:
+      - title: "Market Sentiment Analyzer"
+        url: /market-sentiment-analyzer/
+      - title: "Crypto Dashboard"
+        url: /crypto-dashboard/
+      - title: "Competitor Analysis"
+        url: /competitor-analysis/
+  - title: "Solutions"
+    children:
+      - title: "Market Sentiment Analysis"
+        url: /market-sentiment-analysis/
+      - title: "AI for Tourism"
+        url: /ai-for-tourism/
+      - title: "AI Maturity Assessment"
+        url: /ai-maturity-assessment/
+      - title: "Decision Support Systems"
+        url: /decision-support-systems/
+      - title: "Generative Simulation / RAG Solutions"
+        url: /rag-solutions/
