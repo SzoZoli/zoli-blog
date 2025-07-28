@@ -14,3 +14,5 @@ AI-driven and analytical solutions:
 - [AI Maturity Assessment](/zoli-blog/ai-maturity-assessment/)
 - [Decision Support Systems](/zoli-blog/decision-support-systems/)
 - [Generative Simulation / RAG Solutions](/zoli-blog/rag-solutions/)
+- [Crypto Dashboard](/zoli-blog/crypto-dashboard/)
+- [Competitor Analysis](/zoli-blog/competitor-analysis/)
