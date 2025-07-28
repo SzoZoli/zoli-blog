@@ -4,6 +4,6 @@ title: "Companies & Collaborations"
 permalink: /references/
 author_profile: false
 ---
-# AI Weekly
+# Companies & Collaborations
 
 Content coming soon!
