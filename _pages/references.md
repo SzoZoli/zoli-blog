@@ -9,5 +9,5 @@ author_profile: false
 
 Explore our references and collaborations:
 
-- [Companies & Collaborations](/references/)
-- [Company Detail](/company-detail/)
+- [Companies & Collaborations](/zoli-blog/references/)
+- [Company Detail](/zoli-blog/company-detail/)
