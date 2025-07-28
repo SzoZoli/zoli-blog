@@ -4,6 +4,6 @@ title: "AI Maturity Assessment"
 permalink: /ai-maturity-assessment/
 author_profile: false
 ---
-# AI Weekly
+# AI Maturity Assessment
 
 Content coming soon!
