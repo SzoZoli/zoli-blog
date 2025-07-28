@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Solutions"
+title: "Solutions & Demos"
 permalink: /solutions/
 author_profile: false
 ---
