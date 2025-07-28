@@ -1,9 +1,13 @@
 ---
 layout: single
-title: "Companies & Collaborations"
+title: "References"
 permalink: /references/
 author_profile: false
 ---
-# Companies & Collaborations
 
-Content coming soon!
+# References
+
+Explore our references and collaborations:
+
+- [Companies & Collaborations](/references/)
+- [Company Detail](/company-detail/)
