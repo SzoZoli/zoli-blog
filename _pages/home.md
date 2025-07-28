@@ -4,6 +4,6 @@ title: "Home"
 permalink: /
 author_profile: false
 ---
-# AI Weekly
+# Home
 
 Content coming soon!
