@@ -2,6 +2,7 @@ main:
   - title: "Home"
     url: /
   - title: "Blog & News"
+    url: /blog-news/
     children:
       - title: "AI Weekly"
         url: /ai-weekly/
@@ -10,12 +11,14 @@ main:
       - title: "Competitor Analysis"
         url: /competitor-analysis/
   - title: "References"
+    url: /references/
     children:
       - title: "Companies & Collaborations"
         url: /references/
       - title: "Company Detail"
         url: /company-detail/
   - title: "Demos / Case Studies"
+    url: /demos/
     children:
       - title: "Market Sentiment Analyzer"
         url: /market-sentiment-analyzer/
@@ -24,6 +27,7 @@ main:
       - title: "Competitor Analysis"
         url: /competitor-analysis/
   - title: "Solutions"
+    url: /solutions/
     children:
       - title: "Market Sentiment Analysis"
         url: /market-sentiment-analysis/
