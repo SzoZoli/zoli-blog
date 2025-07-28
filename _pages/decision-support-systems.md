@@ -4,6 +4,6 @@ title: "Decision Support Systems"
 permalink: /decision-support-systems/
 author_profile: false
 ---
-# AI Weekly
+# Decision Support Systems
 
 Content coming soon!
