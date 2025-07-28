@@ -1,9 +1,9 @@
 ---
 layout: single
-title: "Bitcoin & Crypto Weeklyy"
+title: "Bitcoin & Crypto Weekly"
 permalink: /bitcoin-crypto-weekly/
 author_profile: false
 ---
-# AI Weekly
+# Bitcoin & Crypto Weekly
 
 Content coming soon!
