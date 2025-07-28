@@ -5,7 +5,6 @@ permalink: /solutions/
 author_profile: false
 ---
 
-# Solutions
 
 AI-driven and analytical solutions & demos:
 
