@@ -1,8 +1,8 @@
 main:
   - title: "Home"
-    url: /
+    url: /zoli-blog/
   - title: "Blog & News"
-    url: /blog-news/
+    url: /zoli-blog/blog-news/
     children:
       - title: "AI Weekly"
         url: /zoli-blog/ai-weekly/
@@ -11,14 +11,14 @@ main:
       - title: "Competitor Analysis"
         url: /zoli-blog/competitor-analysis/
   - title: "References"
-    url: /references/
+    url: /zoli-blog/references/
     children:
       - title: "Companies & Collaborations"
         url: /zoli-blog/references/
       - title: "Company Detail"
         url: /zoli-blog/company-detail/
   - title: "Demos / Case Studies"
-    url: /demos/
+    url: /zoli-blog/demos/
     children:
       - title: "Market Sentiment Analyzer"
         url: /zoli-blog/market-sentiment-analyzer/
@@ -27,7 +27,7 @@ main:
       - title: "Competitor Analysis"
         url: /zoli-blog/competitor-analysis/
   - title: "Solutions"
-    url: /solutions/
+    url: /zoli-blog/solutions/
     children:
       - title: "Market Sentiment Analysis"
         url: /zoli-blog/market-sentiment-analysis/
@@ -39,3 +39,4 @@ main:
         url: /zoli-blog/decision-support-systems/
       - title: "Generative Simulation / RAG Solutions"
         url: /zoli-blog/rag-solutions/
+
