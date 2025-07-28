@@ -9,28 +9,12 @@ main:
         url: /ai-weekly/
       - title: "Bitcoin & Crypto Weekly"
         url: /bitcoin-crypto-weekly/
-      - title: "Competitor Analysis"
-        url: /competitor-analysis/
 
   - title: "References"
     url: /references/
-    children:
-      - title: "Companies & Collaborations"
-        url: /references/
-      - title: "Company Detail"
-        url: /company-detail/
-
-  - title: "Demos / Case Studies"
-    url: /demos/
-    children:
-      - title: "Market Sentiment Analyzer"
-        url: /market-sentiment-analyzer/
-      - title: "Crypto Dashboard"
-        url: /crypto-dashboard/
-      - title: "Competitor Analysis"
-        url: /competitor-analysis/
-
-  - title: "Solutions"
+      
+        
+  - title: "Solutions & Demos"
     url: /solutions/
     children:
       - title: "Market Sentiment Analysis"
@@ -43,4 +27,8 @@ main:
         url: /decision-support-systems/
       - title: "Generative Simulation / RAG Solutions"
         url: /rag-solutions/
-
+      - title: "Crypto Dashboard"
+        url: /crypto-dashboard/
+      - title: "Competitor Analysis"
+        url: /competitor-analysis/
+    
