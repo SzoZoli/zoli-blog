@@ -4,6 +4,6 @@ title: "Market Sentiment Analysis"
 permalink: /market-sentiment-analysis/
 author_profile: false
 ---
-# AI Weekly
+# Market Sentiment Analysis
 
 Content coming soon!
