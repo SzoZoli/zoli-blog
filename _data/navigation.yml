@@ -5,8 +5,10 @@ main:
   - title: "Blog & News"
     url: /blog-news/
     children:
-      - title: "AI Weekly"
-        url: /ai-weekly/
+      - title: "AI Daily en"
+        url: /ai-daily-en/
+      - title: "AI Daily hu"
+        url: /ai-daily-hu/
       - title: "Bitcoin & Crypto Weekly"
         url: /bitcoin-crypto-weekly/
 
