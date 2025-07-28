@@ -4,6 +4,6 @@ title: "Generative Simulation / RAG Solutions"
 permalink: /rag-solutions/
 author_profile: false
 ---
-# AI Weekly
+# Generative Simulation / RAG Solutions
 
 Content coming soon!
