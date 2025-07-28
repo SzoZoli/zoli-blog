@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "AI Weekly"
-permalink: /ai-weekly/
+title: "AI Daily en"
+permalink: /ai-daily-en/
 author_profile: false
 ---
 
