@@ -1,7 +1,6 @@
 ---
 title: "Keyword Analysis from AI News Titles (2025-07-28)"
 date: 2025-07-28
-categories: [ai-daily-en]
 tags: [ai, keywords, stock, waic, china]
 layout: single
 author_profile: false
