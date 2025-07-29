@@ -1,7 +1,6 @@
 ---
 title: "AI Napi Jelentés: CoreWeave vs. Nebius, Tőzsdei Kockázatok és Globális AI Irányítás (2025-07-27)"
 date: 2025-07-27
-categories: [ai-daily-hu]
 tags: [mesterséges intelligencia, tőzsde, kormányzás, waic, kutatás, github]
 layout: single
 author_profile: false
