@@ -1,7 +1,6 @@
 ---
 title: "AI Napi Jelentés: Cisco, BBC, Oktatás és Kutatási Trendek (2025-07-28)"
 date: 2025-07-28
-categories: [ai-daily-hu]
 tags: [mesterséges intelligencia, tőzsde, oktatás, média, kutatás, github]
 layout: single
 author_profile: false
