@@ -1,7 +1,6 @@
 ---
 title: "AI Daily Report: Cisco, BBC, AI Education & Research Trends (2025-07-28)"
 date: 2025-07-28
-categories: [ai-daily-en]
 tags: [ai, stocks, media, education, research, github]
 layout: single
 author_profile: false
