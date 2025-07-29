@@ -1,7 +1,6 @@
 ---
 title: "Keyword Analysis from AI News Titles (2025-07-27)"
 date: 2025-07-27
-categories: [ai-daily-en]
 tags: [ai, keywords, analysis, trends]
 layout: single
 author_profile: false
