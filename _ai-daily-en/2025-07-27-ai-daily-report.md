@@ -1,7 +1,6 @@
 ---
 title: "AI Daily Report: CoreWeave vs. Nebius, Stock Risks, and Global AI Governance (2025-07-27)"
 date: 2025-07-27
-categories: [ai-daily-en]
 tags: [ai, stocks, policy, waic, china]
 layout: single
 author_profile: false
