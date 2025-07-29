@@ -1,7 +1,6 @@
 ---
 title: "AI hírcímek kulcsszavainak elemzése (2025-07-28)"
 date: 2025-07-28
-categories: [ai-daily-hu]
 tags: [kulcsszavak, tőzsde, mesterséges intelligencia, waic, hírelemzés]
 layout: single
 author_profile: false
