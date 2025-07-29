@@ -229,6 +229,14 @@ sass:
 
 
 # Outputting
+collections:
+  ai-daily-en:
+    output: true
+    permalink: /ai-daily-en/:path/
+  ai-daily-hu:
+    output: true
+    permalink: /ai-daily-hu/:path/
+
 permalink: /:categories/:title/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
