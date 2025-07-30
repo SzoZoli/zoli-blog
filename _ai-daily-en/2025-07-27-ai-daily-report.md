@@ -59,3 +59,4 @@ The sectors most affected include technology and telecommunications, where AI in
 - [OpenBB-finance/OpenBB](OpenBB-finance/OpenBB): Investment Research for Everyone, Everywhere.
 - [frappe/hrms](frappe/hrms): Open Source HR and Payroll Software
 - [donnemartin/system-design-primer](donnemartin/system-design-primer): Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.
+- <!-- rebuild trigger -->
