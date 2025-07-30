@@ -70,6 +70,7 @@ Based on the current trends, while specific terms like RAG (Retrieval Augmented 
   - premier (could refer to government policies)
 
 - **International Development:**
+- <!-- rebuild trigger -->
   - Shanghai
   - Chinese
 
