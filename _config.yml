@@ -233,9 +233,14 @@ collections:
   ai-daily-en:
     output: true
     permalink: /ai-daily-en/:path/
+    sort_by: date
+    order: descending
   ai-daily-hu:
     output: true
     permalink: /ai-daily-hu/:path/
+    sort_by: date
+    order: descending
+
 
 permalink: /:categories/:title/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
