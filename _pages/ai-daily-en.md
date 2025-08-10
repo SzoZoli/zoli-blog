@@ -1,14 +1,15 @@
 ---
-layout: collection
+layout: single
 title: "AI Daily en"
 permalink: /ai-daily-en/
-author_profile: false
-collection: ai-daily-en
-entries_layout: list
 ---
 
-{% assign sorted = site.ai-daily-en | sort: 'date' | reverse %}
-{% for post in sorted %}
-  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-  <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
+<ul>
+{% assign posts = site.posts | where_exp: "p", "p.categories contains 'ai-daily-en'" | sort: "date" | reverse %}
+{% for post in posts %}
+  <li>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <span> — {{ post.date | date: "%Y-%m-%d" }}</span>
+  </li>
 {% endfor %}
+</ul>
