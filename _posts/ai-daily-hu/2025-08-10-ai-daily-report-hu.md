@@ -1,5 +1,6 @@
 ---
 title: "AI Napi Jelentés: AI Hírfrissítés: Osztálytermi Innovációk, Tőzsdei Trendek és Vezető AI Közösségek (2025-08-10)"
+categories: [ai-daily-hu]
 date: 2025-08-10
 tags: [ai oktatás, tőzsde, lemonade, ai magazin, technológiai hírek, osztálytermi technológia, befektetői betekintések]
 layout: single
