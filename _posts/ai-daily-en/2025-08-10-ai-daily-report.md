@@ -1,5 +1,6 @@
 ---
 title: "AI Daily Report: AI News Update: Classroom Innovations, Stock Trends, and Leading AI Communities (2025-08-10)"
+categories: [ai-daily-en]
 date: 2025-08-10
 tags: [AI education, stock market, Lemonade, AI Magazine, technology news, classroom technology, investor insights]
 layout: single
