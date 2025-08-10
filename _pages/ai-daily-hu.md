@@ -6,5 +6,5 @@ author_profile: false
 collection: ai-daily-hu
 entries_layout: list
 sort_by: date
-sort_order: descending
+sort_order:  reverse
 ---
