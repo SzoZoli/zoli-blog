@@ -5,15 +5,6 @@ permalink: /market-sentiment-analysis/
 author_profile: false
 ---
 
-**Állapot** {: .label }
-{: .label .label--info } **Beta**
-
-**Frissítés** {: .label }
-{: .label .label--success } **Napi / heti**
-
-**Adatforrás** {: .label }
-{: .label .label--primary } **Nyilvános webtartalom**
-
 ## Miről szól?
 
 A **Market Sentiment Analysis** egy könnyen érthető, mégis profi megoldás a piacod „pulzusának” mérésére.  
