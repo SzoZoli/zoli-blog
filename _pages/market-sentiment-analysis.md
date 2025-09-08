@@ -45,6 +45,4 @@ Folyamatosan figyeli a versenytársak nyilvános megjelenéseit, érzékeli a we
 > Az eszköz kizárólag nyilvános, jogszerűen elérhető adatokat használ, és tiszteletben tartja a webhelyek irányelveit.  
 {: .notice--info}
 
-[Demo kérése](/contact/){: .btn .btn--primary }  
-[Kapcsolat – LinkedIn](https://www.linkedin.com/in/zoltan-szombathy/){: .btn .btn--inverse .btn--small }  
-[GitHub repó](https://github.com/SzoZoli/zoli-blog){: .btn .btn--light-outline .btn--small }
+
