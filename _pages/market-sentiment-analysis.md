@@ -36,4 +36,42 @@ Folyamatosan figyeli a versenytársak nyilvános megjelenéseit, érzékeli a we
 > Az eszköz kizárólag nyilvános, jogszerűen elérhető adatokat használ, és tiszteletben tartja a webhelyek irányelveit.  
 {: .notice--info}
 
+<!-- ⚙️ Technikai információk – önmagát generáló letöltés gomb (helyi beágyazott MD tartalommal) -->
+<button id="tech-md-btn" class="tech-download-btn" type="button" aria-label="Technikai információk letöltése (Markdown)">
+  ⚙️ Technikai információk (MD)
+</button>
+
+<!-- A beágyazott Markdown tartalom rejtve (Jekyll-Liquid védelem mellett) -->
+{% raw %}
+<textarea id="tech-md-content" style="display:none;">
+---
+title: "AI Trendfigyelő és Market Sentiment Analysis – 2026"
+date: 2025-09-23
+tags: [AI, NLP, Python, Trendfigyelés, Market Sentiment, LangChain, HuggingFace, Jekyll]
+layout: single
+author_profile: false
+---
+
+
+# 📊 Market Sentiment Analysis – 2026-os bemutató
+
+
+
+
+
+## 🧠 AI Trendfigyelő – Példák és Magyarázatok
+
+Ez az oldal egy gyakorlati bemutató a saját fejlesztésű **AI Trendfigyelő** rendszeremről, amely különböző nyelvi modellek (LLM-ek) segítségével végzi a napi jelentések elemzését, kulcsszavazást, és blogra publikálást. A példák Python + LangChain + OpenAI API + Hugging Face modellek köré épülnek.
+
+
+
+### 📌 1. Kulcsszavazás magyar és angol szövegeken (multinyelvű NLP)
+
+```python
+from keybert import KeyBERT
+
+kw_model = KeyBERT(model='paraphrase-multilingual-MiniLM-L12-v2')
+keywords = kw_model.extract_keywords(szoveg, keyphrase_ngram_range=(1, 2), stop_words=None, top_n=10)
+
+
 
