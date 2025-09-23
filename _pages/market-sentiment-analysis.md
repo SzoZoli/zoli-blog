@@ -39,6 +39,7 @@ Folyamatosan figyeli a versenytársak nyilvános megjelenéseit, érzékeli a we
 ---
 
 <div style="text-align: center; margin-top: 20px;">
-<a href="{{ site.baseurl }} /market-sentiment-analysis/readme/" class="btn btn--primary btn--large">📄 Fejlesztői README megnyitása</a>
+  <a href="{{ '/market-sentiment-analysis/readme/' | relative_url }}" class="btn btn--primary btn--large">
+    📄 Fejlesztői README megnyitása
+  </a>
 </div>
-
