@@ -2,7 +2,7 @@ main:
   - title: "Home"
     url: /
 
-    - title: "Blog & News"
+  - title: "Blog & News"
     url: /blog-news/
     children:
       - title: "AI Daily en"
@@ -16,8 +16,7 @@ main:
 
   - title: "References"
     url: /references/
-      
-        
+
   - title: "Solutions & Demos"
     url: /solutions/
     children:
@@ -35,4 +34,4 @@ main:
         url: /crypto-dashboard/
       - title: "Competitor Analysis"
         url: /competitor-analysis/
-    
+
