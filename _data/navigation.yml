@@ -2,7 +2,7 @@ main:
   - title: "Home"
     url: /
 
-  - title: "Blog & News"
+    - title: "Blog & News"
     url: /blog-news/
     children:
       - title: "AI Daily en"
@@ -11,6 +11,8 @@ main:
         url: /ai-daily-hu/
       - title: "Bitcoin & Crypto Weekly"
         url: /bitcoin-crypto-weekly/
+      - title: "AI Act"
+        url: /ai-act/
 
   - title: "References"
     url: /references/
