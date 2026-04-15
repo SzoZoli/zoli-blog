@@ -2,36 +2,11 @@ main:
   - title: "Home"
     url: /
 
-  - title: "Blog & News"
-    url: /blog-news/
-    children:
-      - title: "AI Daily en"
-        url: /ai-daily-en/
-      - title: "AI Daily hu"
-        url: /ai-daily-hu/
-      - title: "Bitcoin & Crypto Weekly"
-        url: /bitcoin-crypto-weekly/
+  - title: "Research"
+    url: /research/
 
-  - title: "AI Act"
-    url: /ai-act/
+  - title: "Projects"
+    url: /projects/
 
-  - title: "References"
-    url: /references/
-
-  - title: "Solutions & Demos"
-    url: /solutions/
-    children:
-      - title: "Market Sentiment Analysis"
-        url: /market-sentiment-analysis/
-      - title: "AI for Tourism"
-        url: /ai-for-tourism/
-      - title: "AI Maturity Assessment"
-        url: /ai-maturity-assessment/
-      - title: "Decision Support Systems"
-        url: /decision-support-systems/
-      - title: "Generative Simulation / RAG Solutions"
-        url: /rag-solutions/
-      - title: "Crypto Dashboard"
-        url: /crypto-dashboard/
-      - title: "Competitor Analysis"
-        url: /competitor-analysis/
+  - title: "About"
+    url: /about/

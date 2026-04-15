@@ -17,13 +17,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "SzoZoli | AI & LLM Engineering Portfolio and Blog"
+title                    : "Szombathy Zoltán"
 title_separator          : "-"
-subtitle                 : "Projects, tutorials, and insights on artificial intelligence and large language models"
-name                     : "Zoltán Szombathy"
-description              : "Welcome to my professional portfolio and tech blog!
-  Here you will find my work in artificial intelligence, machine learning, LLM development, and practical applications.
-  I share project demos, in-depth articles, and AI resources."
+subtitle                 : "PhD Candidate in Economics (PTE) · Applied AI · Compliance · CEE Market Intelligence"
+name                     : "Szombathy Zoltán"
+description              : "Doctoral researcher and applied AI analyst. Building compliance platforms, publishing market research, and applying AI to regional economics across Central & Eastern Europe and the Western Balkans."
 url                      : "https://szozoli.github.io"
 baseurl                  : "/zoli-blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -115,10 +113,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Zoltán Szombathy"
+  name             : "Szombathy Zoltán"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "AI & LLM Engineer, data science enthusiast,"
-  location         : "Hungary / Serbia"
+  bio              : "PhD candidate in Economics at the University of Pécs. Building AI-powered compliance tools and publishing data-driven market research for CEE & Western Balkans."
+  location         : "Novi Sad, Serbia / Hungary"
   email            :
   links:
     - label: "Email"
