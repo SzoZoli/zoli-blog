@@ -52,8 +52,8 @@ Real-time market sentiment analysis using NLP and LLM-powered classification.
 Self-assessment framework for organisations evaluating their AI readiness and adoption level.
 [→ View demo](/zoli-blog/ai-maturity-assessment/)
 
-#### RAG Solutions
-Retrieval-Augmented Generation implementations for domain-specific question answering.
+#### RAG & Agent Solutions
+Retrieval-Augmented Generation implementations including domain-specific AI agents for fitness coaching and childcare advisory.
 [→ View demo](/zoli-blog/rag-solutions/)
 
 #### Competitor Analysis
