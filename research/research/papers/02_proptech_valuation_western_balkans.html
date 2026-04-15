@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PropTech & Property Valuation in the Western Balkans — Szombathy Zoltán</title>
+<meta name="description" content="Data-driven analysis of how digital cadastres, automated valuation models and EU accession-linked reforms are unlocking a previously opaque Western Balkans real estate market for institutional capital.">
+<meta name="author" content="Szombathy Zoltán">
+<meta property="og:title" content="PropTech & Property Valuation in the Western Balkans — Szombathy Zoltán">
+<meta property="og:description" content="Independent research and market analysis on PropTech, AVMs and data infrastructure across the Western Balkans.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0f11;
+    --bg-elev: #16181b;
+    --bg-card: #1a1d21;
+    --border: #2a2e34;
+    --border-strong: #3a3f47;
+    --text: #e8e6e1;
+    --text-muted: #9a9690;
+    --text-soft: #c7c3bd;
+    --accent: #c8a46b;
+    --accent-soft: #8a7a5c;
+    --serif: 'Cormorant Garamond', 'Times New Roman', serif;
+    --sans: 'Inter Tight', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.75;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.9 0 0 0 0 0.85 0 0 0 0 0.75 0 0 0 0.06 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: overlay;
+  }
+
+  /* Top nav */
+  nav.top {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(14, 15, 17, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .back-link {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-soft);
+    text-decoration: none;
+    transition: color 0.25s ease;
+    font-weight: 400;
+  }
+  .back-link:hover { color: var(--accent); }
+  .nav-tag {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    border: 1px solid var(--border-strong);
+    padding: 0.3rem 0.8rem;
+  }
+
+  /* Article */
+  article {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 2rem 5rem;
+    position: relative;
+    z-index: 2;
+  }
+  .paper-meta {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  article h1 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 2rem;
+    color: var(--text);
+  }
+  article h2 {
+    font-family: var(--serif);
+    font-size: 1.75rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+    margin: 3.5rem 0 1.25rem;
+    color: var(--text);
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+  article h2:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 2.5rem;
+  }
+  article h3 {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 2rem 0 0.8rem;
+    color: var(--text);
+  }
+  article p {
+    color: var(--text-soft);
+    margin-bottom: 1.2rem;
+    font-size: 1.02rem;
+    line-height: 1.75;
+  }
+  article p em { color: var(--text); font-style: italic; }
+  article em { font-style: italic; }
+  article strong { color: var(--text); font-weight: 500; }
+  article a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-soft);
+    transition: all 0.2s ease;
+  }
+  article a:hover {
+    color: #d5b37a;
+    border-bottom-color: #d5b37a;
+  }
+  article ul, article ol {
+    margin: 0 0 1.5rem 0;
+    padding-left: 1.2rem;
+    color: var(--text-soft);
+  }
+  article ul li, article ol li {
+    margin-bottom: 0.9rem;
+    padding-left: 0.4rem;
+    line-height: 1.7;
+  }
+  article ul li::marker { color: var(--accent); }
+  article ol li::marker { color: var(--accent); font-family: var(--serif); }
+  article hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 3rem 0;
+  }
+  /* Standfirst: first paragraph after H1 */
+  article > p:first-of-type {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.55;
+    color: var(--text);
+    border-left: 2px solid var(--accent);
+    padding-left: 1.4rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Sources list styling */
+  article h2#sources + ol,
+  article h2:last-of-type + ol {
+    font-size: 0.92rem;
+  }
+
+  /* Footer */
+  footer {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 2rem 3rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    position: relative;
+    z-index: 2;
+    font-style: italic;
+    line-height: 1.6;
+  }
+  footer .back-home {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-style: normal;
+  }
+
+  @media (max-width: 700px) {
+    .nav-inner { padding: 0.9rem 1.25rem; gap: 0.8rem; }
+    .nav-tag { font-size: 0.62rem; padding: 0.25rem 0.55rem; }
+    article { padding: 2.5rem 1.25rem 3.5rem; }
+    article h2 { font-size: 1.4rem; }
+    article > p:first-of-type { font-size: 1.08rem; padding-left: 1rem; }
+    footer { padding: 2rem 1.25rem 3rem; }
+  }
+
+  .figure {
+    margin: 2.5rem 0 2rem;
+    padding: 1.75rem 1.25rem 1rem;
+    background: #141619;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+  }
+  .figure-title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 1.05rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+    letter-spacing: -0.003em;
+  }
+  .figure-canvas-wrap {
+    position: relative;
+    width: 100%;
+    height: 380px;
+  }
+  .figure-canvas-wrap.tall { height: 460px; }
+  .figure-source {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-style: italic;
+    line-height: 1.5;
+  }
+  @media (max-width: 700px) {
+    .figure { padding: 1.25rem 0.75rem 0.75rem; }
+    .figure-canvas-wrap { height: 320px; }
+    .figure-canvas-wrap.tall { height: 420px; }
+  }
+
+</style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+
+<nav class="top">
+  <div class="nav-inner">
+    <a class="back-link" href="../index.html">← Back to index</a>
+    <span class="nav-tag">PropTech · Valuation · Western Balkans</span>
+  </div>
+</nav>
+
+<article>
+  <div class="paper-meta">Paper 02 · Series 01 · 2026</div>
+  
+<p><em>A thought leadership paper on the interaction between PropTech,
+automated valuation, land registry reform and institutional capital
+across Serbia, Bosnia &amp; Herzegovina, Montenegro, North Macedonia,
+Albania and Kosovo.</em></p>
+<h2 id="standfirst">Standfirst</h2>
+<p>The Western Balkans have long sat at the bottom of European real
+estate transparency rankings — a market structured around informal
+transactions, incomplete data, and investor trust built on relationships
+rather than records. That is now changing, driven by a convergence of
+digital cadastre reform, EU accession-linked regulatory harmonisation,
+and a young PropTech ecosystem that is beginning to fill the data
+vacuum. In this paper we assess how AI-enabled valuation, transaction
+analytics and registry digitalisation are reshaping the investment case
+for the region, what remains unresolved, and what this means for the
+institutional capital that has so far largely stayed on the
+sidelines.</p>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li><strong>The data problem is finally being addressed at
+source.</strong> Serbia's Republic Geodetic Authority (RGZ) has fully
+digitised its real estate cadastre, reducing average case resolution
+times from 45 days to four and processing twenty-five times more cases
+with the same headcount as a decade ago. Comparable, if less advanced,
+reforms are under way in Montenegro, North Macedonia and Albania.
+Without this foundation, PropTech and AI valuation in the region would
+have nothing to build on.</li>
+<li><strong>PropTech is emerging, but it is narrow and
+fragmented.</strong> The Western Balkans have produced credible names —
+City Expert and Kredium in Serbia, Rubik (Kosovo-founded), Hobsido
+(Balkans AVM), OTA Sync — but no regional platform has yet achieved the
+scale that would allow institutional investors to rely on algorithmic
+valuation as a primary underwriting tool. The ecosystem is roughly where
+Poland and Czechia stood in 2010.</li>
+<li><strong>EU accession and institutional capital will
+co-move.</strong> Serbia and Montenegro's accession timelines — with 22
+of 35 chapters opened for Serbia and a more advanced trajectory for
+Montenegro — anchor the regulatory convergence that institutional
+investors require. The EBRD has invested over €10.6 billion across
+nearly 400 projects in Serbia since 2001, and the EU accounts for nearly
+40% of Serbia's total FDI stock. As transparency improves, institutional
+allocations to the region will follow on a lag.</li>
+</ul>
+<h2 id="the-transparency-problem-is-the-first-order-constraint">The
+transparency problem is the first-order constraint</h2>
+<div class="figure">
+  <div class="figure-title">Figure 2.1 — Real estate transparency: Western Balkans vs CEE benchmarks</div>
+  <div class="figure-canvas-wrap tall"><canvas id="chart-2-1"></canvas></div>
+  <div class="figure-source">Source: JLL Global Real Estate Transparency Index 2024 (tiers); scores author-estimated within tier.</div>
+</div>
+
+<p>JLL's Global Real Estate Transparency Index, which covers 89
+countries across six sub-indices and 256 underlying metrics, has
+consistently classified the Western Balkan markets in the
+"Semi-Transparent" or "Low Transparency" bands. Serbia tends to
+outperform its neighbours and sits at the higher end of that group;
+Bosnia and Herzegovina, Albania and Kosovo cluster lower. The practical
+effect of these rankings is visible in capital flows: institutional real
+estate allocators — large pension funds, insurance balance sheets, core
+and core-plus fund vehicles — have a hard floor of transparency below
+which they cannot deploy, and most of the Western Balkans sits below
+it.</p>
+<p>This is not a minor technical issue. It determines whether a market
+is the object of institutional underwriting or of opportunistic,
+relationship-driven private capital. The CEE transparency catch-up story
+of the 2000s and 2010s — Poland, Czechia and, later, Romania moving from
+"Semi-Transparent" to "Transparent" status — was the precondition for
+core European real estate capital entering those markets at scale. The
+Western Balkans are attempting the same transition, but with
+structurally smaller market size and a more complex political
+geography.</p>
+<p>The transparency deficit has three practical components: inconsistent
+or incomplete land and mortgage registries; limited published
+transaction data, particularly for commercial assets; and a valuation
+profession that is uneven in training, standards and enforcement.
+PropTech and AI interact with each of these, but only if the underlying
+administrative infrastructure exists.</p>
+<h2 id="serbias-cadastre-reform-is-the-regional-benchmark">Serbia's
+cadastre reform is the regional benchmark</h2>
+<div class="figure">
+  <div class="figure-title">Figure 2.2 — Cadastral digitalisation maturity (1–5 scale)</div>
+  <div class="figure-canvas-wrap"><canvas id="chart-2-2"></canvas></div>
+  <div class="figure-source">Source: Author assessment based on RGZ, national geodetic authority data, World Bank and EU IPA documentation.</div>
+</div>
+
+<p>Serbia's Republic Geodetic Authority (RGZ) has, quietly, delivered
+one of the more impressive public-sector digitalisation programmes in
+the region. The real estate cadastre is now fully digital. As of 4
+November 2023, all applications must be submitted electronically through
+professional users via the e-counter system. According to RGZ's own
+figures, the average resolution time for a cadastral case has fallen
+from 45 days to four, twenty-five times more cases are processed
+annually with the same headcount as in 2015, and an estimated €36
+million in administrative fees has been saved for citizens over three
+years. The e-Cadastre public access portal allows users to query
+property data, registered rights and encumbrances without physical
+office visits.</p>
+<p>Montenegro, North Macedonia and Albania have each advanced their
+cadastral systems, with varying coverage and data quality. Bosnia and
+Herzegovina's fragmented administrative structure — two entities and a
+district, each with separate registries — has made comprehensive reform
+more difficult, but entity-level digitalisation has progressed with
+World Bank and EU support. Kosovo has made material progress on a
+unified cadastre with ongoing donor assistance.</p>
+<p>The importance of these reforms for PropTech cannot be overstated.
+Automated valuation models, transaction comparables analytics and due
+diligence platforms all require structured, queryable, reliable data at
+the property level. Without a digital cadastre, there is nothing for AI
+to analyse. With one, the door opens to a sequence of higher-order
+applications: AVMs, mortgage portfolio analytics, collateral monitoring,
+urban planning models, and cross-border investment platforms.</p>
+<h2 id="avms-in-a-market-with-thin-comparable-data">AVMs in a market
+with thin comparable data</h2>
+<p>Automated Valuation Models function by training on large, clean
+datasets of transaction comparables and property attributes. In mature
+markets — the UK, where over 70% of lenders reportedly use AVMs for
+low-risk residential mortgage origination, or the Netherlands, where
+AVMs are deeply embedded in the mortgage process — the data base is deep
+enough to allow high-confidence algorithmic outputs. In the Western
+Balkans, it is not.</p>
+<p>The 2025 Joint Paper on the Use of Automated Valuation Models in
+Europe, published via the European Mortgage Federation, makes this
+explicit: in Serbia, Montenegro, Greece, Italy, Spain and Ukraine, AVMs
+are not currently used in mortgage origination. In Serbia, AVMs are
+deployed by official external valuers for re-evaluation of mortgages on
+housing loans as a form of mass statistical valuation, but without plans
+to use them as a primary model. TEGoVA's European Valuation Standards,
+effective from 1 January 2025 in their 10th edition, are explicit that
+AVM output cannot constitute a valuation without the approval of a
+qualified expert — a position echoed by RICS's 2024 Red Book updates
+around automation, AI and ESG.</p>
+<p>This means that AVMs in the Western Balkans will, for the foreseeable
+future, operate as decision-support tools rather than standalone
+valuation instruments. That is not a ceiling on their utility — it is a
+design constraint. Decision-support AVMs can compress the time qualified
+valuers spend on routine residential work, standardise collateral
+assessment across mortgage portfolios, and surface outliers for closer
+review. Hobsido, a Balkans-focused AVM platform operating in Serbia,
+Croatia and Bulgaria, targets exactly this use case: property owners and
+intermediaries obtain instant indicative valuations, which then feed
+into a professional valuation workflow.</p>
+<p>The more interesting algorithmic applications in the region are
+adjacent to AVMs rather than AVMs themselves: price index construction
+from listing and transaction data, yield surface mapping across
+micro-markets, and predictive models for liquidity and time-on-market.
+These require less data density than a robust AVM and can deliver
+meaningful analytical lift even where the underlying transaction record
+is incomplete.</p>
+<h2 id="a-thin-but-credible-proptech-ecosystem-is-forming">A thin but
+credible PropTech ecosystem is forming</h2>
+<p>The Western Balkans have produced a PropTech cohort that, while
+small, is beginning to cover the main functional layers. Serbia and
+Romania together drove more than 50% of new startup projects in the
+CEE-Balkans region in 2024–2025, according to regional ecosystem
+trackers. Within Serbia, City Expert has built one of the more
+sophisticated residential transaction platforms in the region, combining
+virtual property tours, professional photography, 360-degree views and
+structured listing data. Kredium has extended from Serbia into the USA
+and UAE, providing a mortgage and real estate transaction infrastructure
+that begins to bridge domestic and cross-border buyers. OTA Sync offers
+a full property management and channel management system, used across
+accommodation providers regionally.</p>
+<p>In Kosovo, Rubik — a PropTech platform focused on modernising real
+estate investment workflows — raised $3.5 million in 2024, a signal that
+international venture capital is beginning to look past the region's
+structural headwinds. Hobsido, covering Serbia, Croatia and Bulgaria,
+illustrates the cross-border approach that is likely to define scale in
+a region where individual markets are small.</p>
+<p>What is missing is institutional scale. None of the Western Balkan
+PropTech names has yet reached the scale of, for example, Poland's
+Otodom (OLX Group), the Czech Sreality, or Hungary's Ingatlan.com — the
+dominant platforms with extensive traffic leads in their home markets.
+The resulting data asymmetry is one of the reasons Western Balkan
+markets remain dependent on international portals and consultant-led
+research rather than platform-generated market intelligence.</p>
+<h2 id="the-role-of-ebrd-ifc-and-eu-instruments">The role of EBRD, IFC
+and EU instruments</h2>
+<p>The multilateral development banks are playing a larger role in
+Western Balkan real estate than the headlines suggest. The EBRD has now
+invested over €10.6 billion across 404 projects in Serbia since 2001,
+with annual new commitments around €800 million sustained for three
+consecutive years, and has deployed a €100 million debt package to
+support sustainable commercial real estate development across the
+region. The Western Balkans Investment Summit, hosted by the EBRD in
+London in 2024, positioned real estate and infrastructure as core
+channels for institutional engagement.</p>
+<p>The IFC, World Bank Group entities, and the Western Balkans
+Investment Framework (a joint EBRD / EIB / European Commission vehicle)
+are active across cadastre modernisation, municipal infrastructure and,
+indirectly, the data environment that PropTech and AVM platforms depend
+on. EU pre-accession instruments — IPA III for Serbia at €219.9 million
+for 2025–2027, of which €139.4 million is non-refundable grant — are
+increasingly targeting digital infrastructure. The Growth Plan for the
+Western Balkans, with an indicative €1.59 billion envelope through 2027,
+is explicitly linked to regulatory convergence milestones.</p>
+<p>For private investors, the practical implication is that the
+regulatory and data environment is converging toward EU norms on a
+relatively predictable trajectory. A real estate thesis premised on that
+convergence — that transparency improves, that institutional capital
+follows, and that cap rates compress as a function of risk perception
+rather than cash flow — is now underwritable in a way it was not five
+years ago.</p>
+<h2 id="eu-accession-is-the-anchor-of-the-institutional-thesis">EU
+accession is the anchor of the institutional thesis</h2>
+<div class="figure">
+  <div class="figure-title">Figure 2.3 — EU accession negotiations: chapter progress (Western Balkans)</div>
+  <div class="figure-canvas-wrap"><canvas id="chart-2-3"></canvas></div>
+  <div class="figure-source">Source: European Commission Enlargement Reports 2024; country accession dossiers.</div>
+</div>
+
+<p>Serbia has opened 22 of 35 accession negotiation chapters, with two
+provisionally closed. The Serbian government's publicly stated ambition
+is to meet accession criteria by 2026–2027, though the actual accession
+date will depend on the EU enlargement cycle and cluster-level progress
+rather than domestic political timing. Montenegro is further advanced
+and remains the most likely next entrant. North Macedonia's trajectory
+has been slowed by bilateral disputes but remains open. Albania is on a
+parallel track to Montenegro. Bosnia and Herzegovina and Kosovo face
+longer horizons.</p>
+<p>EU accession is not a single event; it is a multi-year convergence
+process in which regulatory harmonisation happens well before formal
+membership. For real estate, the accession-driven changes that matter
+most are land registry standards, valuation profession regulation,
+mortgage law, foreign ownership rules, and anti-money-laundering
+controls on property transactions. Each of these is already in
+progress.</p>
+<p>Institutional capital tends to follow accession with a lag. Core-plus
+and value-add allocations to Poland accelerated in the mid-2000s, to the
+Czech Republic in the late 2000s, and to Romania from around 2013. The
+pattern is recognisable: opportunistic private capital enters a market
+several years before institutional capital, often capturing the largest
+risk-adjusted returns, while institutional capital arrives once
+transparency and liquidity thresholds are crossed and then compresses
+yields. The Western Balkans are in the early phase of that cycle.</p>
+<h2 id="implications-for-investors">Implications for investors</h2>
+<p>Three conclusions follow.</p>
+<p>First, investors should distinguish between data problems that are
+structural and data problems that are transient. The Western Balkans'
+transparency deficit is partly structural — small market size, informal
+transaction history — but much of it is transient, being addressed in
+real time by cadastre reform, PropTech platform growth and EU
+convergence. Underwriting a long-hold position today implicitly requires
+a view on that trajectory.</p>
+<p>Second, PropTech and AVM tools should be used as supplements to, not
+substitutes for, regional expertise. The data base is still too thin for
+algorithmic valuation to stand alone, but it is robust enough that
+refusing to use these tools leaves analytical value on the table.
+Serious investors in the region will increasingly combine local market
+intelligence with platform-generated price indices, yield surfaces and
+comparables analytics.</p>
+<p>Third, the structural winners will be platforms that aggregate data
+across the region rather than operate in a single country. The Western
+Balkans are, in platform economics, a single market fragmented across
+six jurisdictions. Hobsido's tri-country footprint, Kredium's
+cross-border expansion and the regional ambitions of City Expert point
+to the direction that scale will take.</p>
+<h2 id="outlook">Outlook</h2>
+<p>The Western Balkans are transitioning from a market that
+international institutional capital could not reasonably analyse to one
+that it can — slowly, unevenly, but directionally. The transparency
+catch-up is real, it is policy-backed, and it is increasingly visible in
+the data infrastructure. AI and PropTech are not the drivers of this
+transition; cadastre reform, EU convergence and the growing
+sophistication of the domestic valuation profession are. But they are
+the accelerators, and they determine how quickly the improved data
+environment translates into improved pricing signals and
+institutional-grade investment vehicles.</p>
+<p>The principal risks are political rather than technological. Serbian
+political volatility, the fragmented governance of Bosnia and
+Herzegovina, and episodic tensions along the Kosovo-Serbia axis can each
+interrupt the convergence trajectory. A regression on rule-of-law
+reforms in any of these jurisdictions would have a disproportionate
+impact on investor sentiment relative to its direct economic effect.</p>
+<p>Our directional view is that the Western Balkans will, over the next
+five to seven years, move from the bottom of the JLL transparency index
+toward the middle band, and that this repricing of risk perception — not
+changes in cash flows — will be the dominant driver of capital returns
+in the region. Investors positioned ahead of that repricing, using both
+local expertise and the emerging PropTech toolkit, will capture the bulk
+of the upside.</p>
+<h2 id="sources">Sources</h2>
+<ol type="1">
+<li>JLL, <em>Global Real Estate Transparency Index 2024</em>. <a
+href="https://www.jll.com/en-us/insights/global-real-estate-transparency-index">jll.com</a></li>
+<li>Republic Geodetic Authority of Serbia (RGZ), <em>e-Cadastre</em> and
+agency publications. <a
+href="https://www.rgz.gov.rs/">rgz.gov.rs</a></li>
+<li>European Mortgage Federation, <em>Joint Paper on the Use of
+Automated Valuation Models in Europe</em>, May 2025. <a
+href="https://hypo.org/sites/default/files/2025-08/AVM-Survey-Version-14-May-2025.pdf">hypo.org</a></li>
+<li>TEGoVA, <em>European Valuation Standards, 10th edition (2025)</em>.
+<a
+href="https://tegova.org/european-valuation-standards-evs/">tegova.org</a></li>
+<li>RICS, <em>Valuation – Global Standards (Red Book), Basis for
+Conclusions, December 2024</em>. <a
+href="https://www.rics.org/">rics.org</a></li>
+<li>European Bank for Reconstruction and Development, <em>Western
+Balkans Investment Summit 2024</em> and country assessments. <a
+href="https://www.ebrd.com/">ebrd.com</a></li>
+<li>European Commission, <em>Enlargement and Eastern Neighbourhood —
+Serbia</em>. <a
+href="https://enlargement.ec.europa.eu/countries/serbia_en">enlargement.ec.europa.eu</a></li>
+<li>U.S. Department of State, <em>2025 Investment Climate Statements:
+Serbia</em>. <a
+href="https://www.state.gov/reports/2025-investment-climate-statements/serbia">state.gov</a></li>
+<li>The Recursive, <em>45+ Proptech Startups Transforming Real Estate in
+CEE</em> and Balkan ecosystem reports. <a
+href="https://therecursive.com/">therecursive.com</a></li>
+<li>KPMG, <em>Property Lending Barometer 2024</em>. <a
+href="https://kpmg.com/rs/en/home/insights/2024/12/property-lending-barometer-2024.html">kpmg.com/rs</a></li>
+</ol>
+
+</article>
+
+<footer>
+  <a class="back-link back-home" href="../index.html">← Back to index</a>
+  <div>Szombathy Zoltán · Research &amp; Technology Analyst · Novi Sad · April 2026</div>
+  <div style="margin-top: 0.5rem;">Independent research on AI, PropTech and real estate data infrastructure. The views expressed are the author's own and do not constitute investment advice, brokerage or transactional advisory.</div>
+</footer>
+
+<script>
+
+(function() {
+  const ctx = document.getElementById('chart-2-1');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'bar',
+    data: {"labels": ["Kosovo", "Bosnia & Herz.", "Albania", "N. Macedonia", "Montenegro", "Serbia", "Croatia", "Romania", "Slovakia", "Hungary", "Czechia", "Poland"], "datasets": [{"label": "GRETI composite score (lower = more transparent)", "data": [4.0, 3.9, 3.8, 3.7, 3.6, 3.3, 3.0, 2.7, 2.5, 2.6, 2.3, 2.2], "backgroundColor": ["#b8645e", "#b8645e", "#b8645e", "#b8645e", "#b8645e", "#c8a46e", "#c8a46e", "#c8a46e", "#c8a46e", "#c8a46e", "#6e9c7a", "#6e9c7a"]}]},
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      indexAxis: 'y',
+      interaction: { mode: 'nearest', intersect: false },
+      plugins: {
+        legend: {
+          display: false,
+          labels: { color: '#e8e6e1', font: { family: 'Inter Tight', size: 12 }, usePointStyle: true, boxWidth: 10 }
+        },
+        tooltip: {
+          backgroundColor: '#0e0f11',
+          borderColor: '#3a3f47',
+          borderWidth: 1,
+          titleColor: '#e8e6e1',
+          bodyColor: '#c7c3bd',
+          padding: 10,
+          displayColors: true,
+          boxPadding: 4
+        }
+      },
+    scales: {
+      x: {
+        stacked: false,
+        ticks: { color: '#9a9690' },
+        grid: { color: '#2a2e34', drawTicks: false },
+        title: { display: true, text: 'GRETI composite score', color: '#c7c3bd' },
+      },
+      y: {
+        stacked: false,
+        ticks: { color: '#9a9690' },
+        grid: { color: '#2a2e34', drawTicks: false },
+        
+      }
+    },
+      elements: { point: { radius: 3, hoverRadius: 6 }, line: { borderWidth: 2 } }
+    }
+  });
+})();
+
+
+(function() {
+  const ctx = document.getElementById('chart-2-2');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'radar',
+    data: {"labels": ["Digital registry", "Online public access", "Electronic submission", "Processing speed", "Data reliability"], "datasets": [{"label": "Serbia", "data": [5, 5, 5, 5, 4], "borderColor": "#c8a46e", "backgroundColor": "rgba(200,164,110,0.15)"}, {"label": "Montenegro", "data": [3, 3, 3, 3, 3], "borderColor": "#6ea3c8", "backgroundColor": "rgba(110,163,200,0.10)"}, {"label": "N. Macedonia", "data": [3, 3, 3, 3, 3], "borderColor": "#c86e8a", "backgroundColor": "rgba(200,110,138,0.10)"}, {"label": "Albania", "data": [3, 2, 3, 3, 3], "borderColor": "#8ac86e", "backgroundColor": "rgba(138,200,110,0.10)"}, {"label": "B&H", "data": [2, 2, 2, 2, 2], "borderColor": "#c88a6e", "backgroundColor": "rgba(200,138,110,0.10)"}, {"label": "Kosovo", "data": [3, 3, 3, 3, 3], "borderColor": "#9a7ac8", "backgroundColor": "rgba(154,122,200,0.10)"}]},
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      indexAxis: 'x',
+      interaction: { mode: 'nearest', intersect: false },
+      plugins: {
+        legend: {
+          display: true,
+          labels: { color: '#e8e6e1', font: { family: 'Inter Tight', size: 12 }, usePointStyle: true, boxWidth: 10 }
+        },
+        tooltip: {
+          backgroundColor: '#0e0f11',
+          borderColor: '#3a3f47',
+          borderWidth: 1,
+          titleColor: '#e8e6e1',
+          bodyColor: '#c7c3bd',
+          padding: 10,
+          displayColors: true,
+          boxPadding: 4
+        }
+      },
+    scales: {
+      r: {
+        min: 0, max: 5,
+        ticks: { stepSize: 1, color: '#9a9690', backdropColor: 'transparent' },
+        grid: { color: '#2a2e34' },
+        angleLines: { color: '#2a2e34' },
+        pointLabels: { color: '#e8e6e1', font: { family: 'Inter Tight', size: 11 } }
+      }
+    },
+      elements: { point: { radius: 3, hoverRadius: 6 }, line: { borderWidth: 2 } }
+    }
+  });
+})();
+
+
+(function() {
+  const ctx = document.getElementById('chart-2-3');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'bar',
+    data: {"labels": ["Kosovo", "B&H", "N. Macedonia", "Albania", "Serbia", "Montenegro"], "datasets": [{"label": "Provisionally closed", "data": [0, 0, 0, 0, 2, 7], "backgroundColor": "#c8a46e"}, {"label": "Opened (not closed)", "data": [0, 0, 0, 24, 20, 26], "backgroundColor": "#6ea3c8"}, {"label": "Not yet opened", "data": [35, 35, 35, 11, 13, 2], "backgroundColor": "#2a2e34"}]},
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      indexAxis: 'y',
+      interaction: { mode: 'nearest', intersect: false },
+      plugins: {
+        legend: {
+          display: true,
+          labels: { color: '#e8e6e1', font: { family: 'Inter Tight', size: 12 }, usePointStyle: true, boxWidth: 10 }
+        },
+        tooltip: {
+          backgroundColor: '#0e0f11',
+          borderColor: '#3a3f47',
+          borderWidth: 1,
+          titleColor: '#e8e6e1',
+          bodyColor: '#c7c3bd',
+          padding: 10,
+          displayColors: true,
+          boxPadding: 4
+        }
+      },
+    scales: {
+      x: {
+        stacked: true,
+        ticks: { color: '#9a9690' },
+        grid: { color: '#2a2e34', drawTicks: false },
+        title: { display: true, text: 'Chapters (of 35 total)', color: '#c7c3bd' },
+      },
+      y: {
+        stacked: true,
+        ticks: { color: '#9a9690' },
+        grid: { color: '#2a2e34', drawTicks: false },
+        
+      }
+    },
+      elements: { point: { radius: 3, hoverRadius: 6 }, line: { borderWidth: 2 } }
+    }
+  });
+})();
+
+</script>
+</body>
+</html>

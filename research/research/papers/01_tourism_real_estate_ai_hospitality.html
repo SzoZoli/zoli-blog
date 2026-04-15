@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tourism Real Estate & AI-Based Hospitality — Szombathy Zoltán</title>
+<meta name="description" content="Data-driven analysis of how algorithmic revenue management, short-term rental professionalisation and guest-experience automation are reshaping hotel and tourism asset values across Southeast Europe.">
+<meta name="author" content="Szombathy Zoltán">
+<meta property="og:title" content="Tourism Real Estate & AI-Based Hospitality — Szombathy Zoltán">
+<meta property="og:description" content="Independent research and market analysis on AI, PropTech and data infrastructure in Southeast European hospitality real estate.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0f11;
+    --bg-elev: #16181b;
+    --bg-card: #1a1d21;
+    --border: #2a2e34;
+    --border-strong: #3a3f47;
+    --text: #e8e6e1;
+    --text-muted: #9a9690;
+    --text-soft: #c7c3bd;
+    --accent: #c8a46b;
+    --accent-soft: #8a7a5c;
+    --serif: 'Cormorant Garamond', 'Times New Roman', serif;
+    --sans: 'Inter Tight', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.75;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.9 0 0 0 0 0.85 0 0 0 0 0.75 0 0 0 0.06 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: overlay;
+  }
+
+  /* Top nav */
+  nav.top {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(14, 15, 17, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .back-link {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-soft);
+    text-decoration: none;
+    transition: color 0.25s ease;
+    font-weight: 400;
+  }
+  .back-link:hover { color: var(--accent); }
+  .nav-tag {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    border: 1px solid var(--border-strong);
+    padding: 0.3rem 0.8rem;
+  }
+
+  /* Article */
+  article {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 2rem 5rem;
+    position: relative;
+    z-index: 2;
+  }
+  .paper-meta {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  article h1 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 2rem;
+    color: var(--text);
+  }
+  article h2 {
+    font-family: var(--serif);
+    font-size: 1.75rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+    margin: 3.5rem 0 1.25rem;
+    color: var(--text);
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+  article h2:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 2.5rem;
+  }
+  article h3 {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 2rem 0 0.8rem;
+    color: var(--text);
+  }
+  article p {
+    color: var(--text-soft);
+    margin-bottom: 1.2rem;
+    font-size: 1.02rem;
+    line-height: 1.75;
+  }
+  article p em { color: var(--text); font-style: italic; }
+  article em { font-style: italic; }
+  article strong { color: var(--text); font-weight: 500; }
+  article a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-soft);
+    transition: all 0.2s ease;
+  }
+  article a:hover {
+    color: #d5b37a;
+    border-bottom-color: #d5b37a;
+  }
+  article ul, article ol {
+    margin: 0 0 1.5rem 0;
+    padding-left: 1.2rem;
+    color: var(--text-soft);
+  }
+  article ul li, article ol li {
+    margin-bottom: 0.9rem;
+    padding-left: 0.4rem;
+    line-height: 1.7;
+  }
+  article ul li::marker { color: var(--accent); }
+  article ol li::marker { color: var(--accent); font-family: var(--serif); }
+  article hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 3rem 0;
+  }
+  /* Standfirst: first paragraph after H1 */
+  article > p:first-of-type {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.55;
+    color: var(--text);
+    border-left: 2px solid var(--accent);
+    padding-left: 1.4rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Sources list styling */
+  article h2#sources + ol,
+  article h2:last-of-type + ol {
+    font-size: 0.92rem;
+  }
+
+  /* Footer */
+  footer {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 2rem 3rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    position: relative;
+    z-index: 2;
+    font-style: italic;
+    line-height: 1.6;
+  }
+  footer .back-home {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-style: normal;
+  }
+
+  @media (max-width: 700px) {
+    .nav-inner { padding: 0.9rem 1.25rem; gap: 0.8rem; }
+    .nav-tag { font-size: 0.62rem; padding: 0.25rem 0.55rem; }
+    article { padding: 2.5rem 1.25rem 3.5rem; }
+    article h2 { font-size: 1.4rem; }
+    article > p:first-of-type { font-size: 1.08rem; padding-left: 1rem; }
+    footer { padding: 2rem 1.25rem 3rem; }
+  }
+
+  .figure {
+    margin: 2.5rem 0 2rem;
+    padding: 1.75rem 1.25rem 1rem;
+    background: #141619;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+  }
+  .figure-title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 1.05rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+    letter-spacing: -0.003em;
+  }
+  .figure-canvas-wrap {
+    position: relative;
+    width: 100%;
+    height: 380px;
+  }
+  .figure-canvas-wrap.tall { height: 460px; }
+  .figure-source {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-style: italic;
+    line-height: 1.5;
+  }
+  @media (max-width: 700px) {
+    .figure { padding: 1.25rem 0.75rem 0.75rem; }
+    .figure-canvas-wrap { height: 320px; }
+    .figure-canvas-wrap.tall { height: 420px; }
+  }
+
+</style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+
+<nav class="top">
+  <div class="nav-inner">
+    <a class="back-link" href="../index.html">← Back to index</a>
+    <span class="nav-tag">Tourism · Hospitality · SEE</span>
+  </div>
+</nav>
+
+<article>
+  <div class="paper-meta">Paper 01 · Series 01 · 2026</div>
+  
+<p><em>A thought leadership paper on the convergence of artificial
+intelligence, hospitality operations and tourism property investment
+across Serbia, Montenegro, Croatia and the Mediterranean
+periphery.</em></p>
+<h2 id="standfirst">Standfirst</h2>
+<p>Southeast Europe's tourism economy has emerged from the post-pandemic
+cycle stronger than almost any other European subregion, with foreign
+arrivals in Serbia running roughly 40% above Q2 2019 levels in Q2 2024
+and Montenegro capturing a 31% larger share of the European market than
+it held before the pandemic. In parallel, artificial intelligence is
+moving from marketing novelty to operational infrastructure inside
+hotels, serviced apartments and short-term rentals. In this paper we
+assess how that convergence — rapid demand growth meeting algorithmic
+operations — is beginning to reset the value stack for tourism real
+estate in the region. We examine revenue management, short-term rentals,
+guest experience, destination-level data systems, and what all of this
+means for cap rates and asset selection.</p>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li><strong>Demand is running hot but margins, not arrivals, will decide
+the next cycle.</strong> Southeast Europe posted stronger post-pandemic
+recovery than the European average, but operating leverage is where AI
+is moving the needle. Dynamic pricing, automated guest communications
+and predictive labour scheduling are already visible in regional
+portfolios — and they disproportionately benefit well-capitalised,
+professionally managed assets.</li>
+<li><strong>The short-term rental segment is professionalising faster
+than the branded hotel stock.</strong> AirDNA's European data shows
+record demand in 2024 with Croatia's occupancy rising 10.6% year-on-year
+in 2025 despite flat supply, while Greece's active listings have
+overtaken Croatia at 130,000-plus. AI pricing and property management
+tools are closing the operational gap with branded hotels and changing
+the investment case for residential-to-tourism conversion.</li>
+<li><strong>Investor discipline will matter more than ever.</strong>
+European hotel transactions reached €22.4 billion in 2024 — the highest
+since 2019 — and Cushman &amp; Wakefield has explicitly flagged a
+"restart" of deal flow in Central, Eastern and South Eastern Europe. In
+a market where algorithmic revenue management can lift RevPAR
+meaningfully, underwriting that does not adjust for AI-enabled operating
+uplift will either misprice risk or leave returns on the table.</li>
+</ul>
+<h2
+id="the-region-entered-2025-with-a-tailwind-few-investors-anticipated">The
+region entered 2025 with a tailwind few investors anticipated</h2>
+<div class="figure">
+  <div class="figure-title">Figure 1.1 — International tourist arrivals, recovery index (2019 = 100)</div>
+  <div class="figure-canvas-wrap"><canvas id="chart-1-1"></canvas></div>
+  <div class="figure-source">Source: European Travel Commission; UN Tourism; Eurostat. Intermediate-year values partly interpolated.</div>
+</div>
+
+<p>Southeast Europe's tourism fundamentals have strengthened faster than
+the continental average. According to the European Travel Commission,
+foreign arrivals to Serbia in Q2 2024 stood approximately 40% above the
+same quarter of 2019, with overnight stays up 69% on the pre-pandemic
+benchmark; full-year 2024 foreign arrivals grew 11.7% year-on-year to
+2.38 million. Montenegro's share of European arrivals was up 31%
+relative to 2019 over the same window. Croatia, the regional bellwether,
+continued to record the highest tourism intensity of any Mediterranean
+EU member, at 24 nights per inhabitant in 2023, with travel receipts
+representing 18.7% of GDP — a figure that dwarfs both Greece (9.1%) and
+the EU average. In Q2 2025, international tourist arrivals across Europe
+grew a further 3.3% year-on-year, with U.S. inbound to Croatia,
+Montenegro and Greece each growing 16–18%.</p>
+<p>This is not a story of broad European recovery; it is a story of
+differential performance. The SEE arc — from the Croatian coast through
+Montenegro, into Serbia's urban hubs and onward to the Greek islands —
+has outperformed because it combines price positioning (still well below
+Western Mediterranean benchmarks), cultural programming (Novi Sad's
+European Capital of Culture cycle, the EXIT festival that continues to
+draw ~200,000 attendees to Petrovaradin Fortress each July), and
+proximity to source markets in Germany, Austria and the Nordics.</p>
+<p>That demand backdrop matters because it sets the stage for what AI
+can and cannot do. In a structurally weak market, algorithmic revenue
+management at best defends margin. In a structurally growing market, it
+converts occupancy into disproportionate RevPAR gains and, by extension,
+into higher NOI and lower exit cap rates. SEE is increasingly the
+latter.</p>
+<h2
+id="revenue-management-is-quietly-becoming-the-dominant-source-of-operating-alpha">Revenue
+management is quietly becoming the dominant source of operating
+alpha</h2>
+<p>The 2024 Deloitte European Hotel Industry and Investment Survey found
+that only about one in ten European hoteliers had fully implemented AI
+solutions, with another fifth in pilot phase. The remainder were either
+exploring or not yet considering the technology. That headline conceals
+a more important shift: among the adopters, revenue management is
+consistently the first workflow to be AI-enabled. Deloitte's own case
+material cites a global chain lifting RevPAR after deploying a
+machine-learning revenue management tool that ingests historical
+bookings, competitor rates and local event calendars to generate
+granular pricing recommendations in near real time.</p>
+<p>For SEE, the implications are specific. Properties in Belgrade, Novi
+Sad, Split, Dubrovnik and the Bay of Kotor face some of the most extreme
+seasonality and event-driven demand spikes in Europe — EXIT week in Novi
+Sad, Ultra Europe in Split, the summer yachting season in Tivat. Static
+pricing grids leave material revenue on the table in these windows and
+erode occupancy in the shoulder months. AI-driven revenue management
+systems, whether embedded in IDeaS, Duetto, Atomize or the in-house
+platforms of regional chains, compress that gap.</p>
+<p>Deloitte's UK hospitality team further notes that roughly a quarter
+of hospitality executives now see generative AI as a lever for the
+finance function — anomaly detection, forecasting, stress testing
+cashflow models. For an investor underwriting a hotel in Kotor or a
+serviced-apartment complex in Belgrade's Dorćol, the practical question
+is no longer whether the incoming operator uses a modern revenue
+management system, but how mature their data infrastructure is, how
+clean the historical pickup data is, and whether the property management
+system exposes the API surface needed for these tools to function. This
+is a due diligence dimension that barely existed five years ago.</p>
+<h2
+id="the-short-term-rental-segment-is-reorganising-itself-around-software">The
+short-term rental segment is reorganising itself around software</h2>
+<div class="figure">
+  <div class="figure-title">Figure 1.2 — Short-term rental: supply vs demand growth, Adriatic/Aegean</div>
+  <div class="figure-canvas-wrap"><canvas id="chart-1-2"></canvas></div>
+  <div class="figure-source">Source: AirDNA European Review, Dec 2024 and Sept 2025. Montenegro figure estimated.</div>
+</div>
+
+<p>AirDNA's December 2024 European review described the year as one of
+record demand and resilient occupancy despite slowing ADR growth as
+supply caught up with post-pandemic travel. Within the European set, the
+SEE corridor is among the most dynamic. In Croatia, 2025 data shows
+supply falling 0.8% while demand rose 11.7%, pushing occupancy up 10.6%
+year-on-year — a tightening that is difficult to engineer deliberately
+and that reflects both regulatory friction on new listings and the
+continued professionalisation of existing stock. Greece has pushed past
+130,000 active listings, overtaking Croatia in total supply and moving
+toward the status of Europe's sixth-largest short-term rental
+market.</p>
+<p>The operators capturing the upside are increasingly software-native.
+AI-driven dynamic pricing tools (PriceLabs, Wheelhouse, Beyond) have
+moved from a power-user niche to mainstream deployment. Automated guest
+communication platforms handle the multilingual check-in flow that a
+regional market serving German, Austrian, French, Israeli, Turkish and
+Anglophone travellers demands. Predictive maintenance alerts, smart-lock
+integrations and dynamic cleaning schedules are collapsing the
+operational distance between a thirty-unit STR portfolio and a
+three-star hotel.</p>
+<p>For real estate investors, this changes the calculus of
+residential-to-tourism conversion. A Belgrade city-centre apartment or a
+Budva seafront unit is a different asset when it is operated by a
+platform that can extract near-hotel-level yield with sub-hotel-level
+overhead. It also means that the gap between sophisticated and
+unsophisticated STR operators is widening rather than narrowing:
+regulatory tightening across the Adriatic is reducing supply growth, and
+the operators who can extract the most yield per available night are the
+ones best positioned to absorb higher acquisition costs.</p>
+<h2
+id="guest-experience-automation-is-reframing-the-operating-model">Guest
+experience automation is reframing the operating model</h2>
+<p>Southeast Europe has a structural labour problem. Seasonal
+hospitality workers are scarce and becoming more expensive; Croatia has
+imported tens of thousands of workers from South and Southeast Asia to
+fill summer roles. Montenegro faces a similar constraint with a narrow
+labour base on the coast. In this context, AI-driven guest experience
+automation is not a technology story, it is a margin story.</p>
+<p>Chatbots for pre-arrival communication, AI concierge interfaces
+in-room, contactless check-in kiosks and automated upsell engines are
+each individually small. Together they shift the front-office labour
+requirement meaningfully — Deloitte and HRS International have both
+noted that European hoteliers report 15–30% reductions in specific
+front-office tasks after AI deployment, though headcount reductions are
+less dramatic because the labour freed is often redeployed to
+higher-touch roles. The resulting GOP margin uplift compounds with
+revenue management gains and flows directly into valuation
+multiples.</p>
+<p>Regional examples are still emerging rather than established.
+Hunguest Hotels in Hungary and CEE-focused operators like Radisson CEE
+have rolled out AI-assisted guest platforms across properties in
+Budapest, Belgrade and the Adriatic. Lustica Bay in Montenegro and Porto
+Montenegro in Tivat — the latter a TYHA Platinum-accredited superyacht
+marina with 460 berths today and an anticipated build-out to around 850
+berths — have integrated digital guest journeys as part of the luxury
+proposition. The investment implication is that new-build tourism real
+estate is being specified with the data and connectivity infrastructure
+to support these systems natively, while older stock will require a
+meaningful capex cycle to catch up. In underwriting, this is becoming a
+standalone line item.</p>
+<h2
+id="destination-level-data-is-the-next-frontier-and-it-is-uneven">Destination-level
+data is the next frontier, and it is uneven</h2>
+<p>Individual properties can only optimise so far. The next layer of
+value comes from destination-level data: visitor flow models that
+predict when Dubrovnik's old town will hit saturation, arrival forecasts
+that let Montenegro's border authorities stage capacity, seasonality
+management that nudges demand from the August peak into May and October.
+Barcelona, Amsterdam and Venice have each invested in AI-driven
+destination management platforms; Dubrovnik's overtourism controls have
+drawn on similar thinking.</p>
+<p>In SEE, adoption is patchy. Croatia's National Tourist Board has
+invested in digital analytics, and the Istria region operates one of the
+more mature destination data platforms in the region. Belgrade and Novi
+Sad, having absorbed the European Capital of Culture cycle, are
+developing event-led visitor data capabilities. Serbia's Tourism
+Organisation has partnered on digitalisation projects funded through EU
+IPA instruments. Montenegro, with tourism representing around a quarter
+of GDP, has the greatest economic incentive but the most limited
+institutional capacity.</p>
+<p>For investors, destination-level data matters because it shapes the
+regulatory environment in which their assets operate. A destination that
+can predict and manage overcrowding is less likely to impose blunt caps
+on new hotel capacity or STR licences. A destination without that
+capacity is more likely to regulate by instinct — a risk vector that is
+increasingly material across the Adriatic as political pressure on
+short-term rentals intensifies.</p>
+<h2
+id="investment-implications-cap-rates-asset-selection-and-the-underwriting-delta">Investment
+implications: cap rates, asset selection and the underwriting delta</h2>
+<div class="figure">
+  <div class="figure-title">Figure 1.3 — European hotel transaction volumes (€bn)</div>
+  <div class="figure-canvas-wrap"><canvas id="chart-1-3"></canvas></div>
+  <div class="figure-source">Source: Cushman & Wakefield. 2021 value estimated.</div>
+</div>
+
+<p>European hotel transaction volumes reached €22.4 billion in 2024 — a
+37% year-on-year increase and the strongest print since 2019 — with the
+UK, Spain and France accounting for 59% of flow. Cushman &amp; Wakefield
+noted that while Western Europe dominated, there was a visible "restart"
+of deal activity in Central, Eastern and South Eastern Europe, driven by
+improved financing conditions and attractive yields relative to core
+markets. In Montenegro, foreign real estate investment totalled
+approximately €455 million in 2024, with top source markets being
+Serbia, Turkey, Germany, Russia and the United States, and national
+property prices rising 20.8% — more than five times the EU average of
+3.6%.</p>
+<p>Three investment implications follow.</p>
+<p>First, AI-enabled operating uplift should be explicitly modelled in
+underwriting. A property operated by a franchise using modern revenue
+management and guest automation will outperform an identical asset under
+legacy operations by enough to justify a different entry price. The
+simplistic "same hotel, same cap rate" comparison is increasingly
+misleading.</p>
+<p>Second, asset selection should weight data and connectivity
+infrastructure more heavily. Older hotel stock in Belgrade, Split or
+Thessaloniki may offer headline yield attractiveness, but the capex
+required to bring the property into an AI-ready operating environment —
+PMS integration, connectivity, smart-room specification — is non-trivial
+and often underestimated at acquisition.</p>
+<p>Third, residential-to-tourism conversion opportunities in Adriatic
+and Aegean secondary locations should be assessed in the context of the
+STR platform ecosystem rather than as standalone assets. The yield
+differential between an owner-managed STR and a platform-operated one,
+using AI pricing and automated guest communications, is widening.
+Aggregation plays — portfolios of 30–200 units under a single management
+platform — are becoming a distinct asset class and are increasingly
+financeable.</p>
+<h2 id="outlook">Outlook</h2>
+<p>The SEE tourism real estate story for the next five years is
+fundamentally constructive. The demand backdrop is among the strongest
+in Europe, the regional cost base remains competitive, and the
+operational technology stack is maturing rapidly. AI is not the reason
+this market will grow — demographics, lifestyle shifts and price
+differentials would carry it regardless — but AI is likely to be the
+reason that some operators and some investors capture disproportionate
+returns while others underperform.</p>
+<p>The central uncertainty is regulatory. Short-term rental regulation
+is tightening across the Adriatic, destination-level overtourism
+pressure is rising in Dubrovnik, Kotor and the most popular Greek
+islands, and the political economy of tourism is shifting as local
+populations push back against displacement and seasonality pressures. A
+well-designed AI and data infrastructure at the destination level can
+ease that pressure; a poorly managed one will intensify it. Investors
+should track regulatory trajectory as carefully as they track
+RevPAR.</p>
+<p>Our directional view is that, over the next cycle, the dispersion of
+returns across SEE tourism assets will widen materially — and AI
+adoption, both at the property and destination level, will be one of the
+strongest explanatory variables for that dispersion. Passive exposure to
+the region will deliver solid returns on the strength of the demand
+backdrop alone. Active, operationally aware exposure, with underwriting
+that explicitly prices the AI operating delta, will deliver meaningfully
+better ones.</p>
+<h2 id="sources">Sources</h2>
+<ol type="1">
+<li>European Travel Commission, <em>European Tourism: Trends &amp;
+Prospects</em> (Q4 2024 and Q2 2025 reports). <a
+href="https://etc-corporate.org/">etc-corporate.org</a></li>
+<li>Eurostat, <em>Tourism statistics</em> and <em>Housing in Europe –
+2025 edition</em>. <a
+href="https://ec.europa.eu/eurostat">ec.europa.eu/eurostat</a></li>
+<li>Deloitte, <em>European Hotel Industry and Investment Survey
+2024</em> and <em>2025 edition</em>. <a
+href="https://www.deloitte.com/uk/en/Industries/consumer/research/european-hotel-industry-and-investment-survey.html">deloitte.com/uk</a></li>
+<li>Deloitte UK, <em>Embracing the future: AI revolutionising operations
+and consumer engagement</em>. <a
+href="https://www.deloitte.com/uk/en/Industries/consumer/blogs/embracing-the-future-second.html">deloitte.com/uk</a></li>
+<li>AirDNA, <em>European Review December 2024: Record Demand Caps a
+Strong Year for STRs</em> and subsequent monthly reviews through 2025.
+<a
+href="https://www.airdna.co/blog/european-review-december-2024">airdna.co/blog</a></li>
+<li>Cushman &amp; Wakefield, <em>European Hotel Deal Volumes Surge to
+Five-Year High</em> (2024) and <em>Hospitality Market Beat</em>. <a
+href="https://www.cushmanwakefield.com/en/united-kingdom/news/2024/08/european-hotel-deal-volumes-surge-to-five-year-high">cushmanwakefield.com</a></li>
+<li>Henley &amp; Partners, <em>Centi-Millionaire Report 2024 — Porto
+Montenegro</em>. <a
+href="https://www.henleyglobal.com/publications/centi-millionaire-report-2024/porto-montenegro-super-yachts-and-prime-real-estate">henleyglobal.com</a></li>
+<li>Global Property Guide, <em>Montenegro's Residential Property Market
+Analysis 2025</em>. <a
+href="https://www.globalpropertyguide.com/europe/montenegro/price-history">globalpropertyguide.com</a></li>
+<li>UN Tourism, <em>World Tourism Barometer</em>. <a
+href="https://www.unwto.org/">unwto.org</a></li>
+<li>Hospitality Net / Statista, AI in hospitality adoption statistics
+(2024–2025).</li>
+</ol>
+
+</article>
+
+<footer>
+  <a class="back-link back-home" href="../index.html">← Back to index</a>
+  <div>Szombathy Zoltán · Research &amp; Technology Analyst · Novi Sad · April 2026</div>
+  <div style="margin-top: 0.5rem;">Independent research on AI, PropTech and real estate data infrastructure. The views expressed are the author's own and do not constitute investment advice, brokerage or transactional advisory.</div>
+</footer>
+
+<script>
+
+(function() {
+  const ctx = document.getElementById('chart-1-1');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'line',
+    data: {"labels": [2019, 2020, 2021, 2022, 2023, 2024], "datasets": [{"label": "Serbia", "data": [100, 42, 76, 108, 125, 140], "borderColor": "#c8a46e", "backgroundColor": "rgba(200,164,110,0.08)", "tension": 0.25}, {"label": "Montenegro", "data": [100, 22, 58, 88, 112, 131], "borderColor": "#6ea3c8", "backgroundColor": "rgba(110,163,200,0.08)", "tension": 0.25}, {"label": "Croatia", "data": [100, 49, 79, 97, 102, 106], "borderColor": "#c86e8a", "backgroundColor": "rgba(200,110,138,0.08)", "tension": 0.25}, {"label": "EU average", "data": [100, 38, 58, 85, 97, 102], "borderColor": "#9a9690", "borderDash": [5, 4], "backgroundColor": "transparent", "tension": 0.25}]},
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      indexAxis: 'x',
+      interaction: { mode: 'nearest', intersect: false },
+      plugins: {
+        legend: {
+          display: true,
+          labels: { color: '#e8e6e1', font: { family: 'Inter Tight', size: 12 }, usePointStyle: true, boxWidth: 10 }
+        },
+        tooltip: {
+          backgroundColor: '#0e0f11',
+          borderColor: '#3a3f47',
+          borderWidth: 1,
+          titleColor: '#e8e6e1',
+          bodyColor: '#c7c3bd',
+          padding: 10,
+          displayColors: true,
+          boxPadding: 4
+        }
+      },
+    scales: {
+      x: {
+        stacked: false,
+        ticks: { color: '#9a9690' },
+        grid: { color: '#2a2e34', drawTicks: false },
+        
+      },
+      y: {
+        stacked: false,
+        ticks: { color: '#9a9690' },
+        grid: { color: '#2a2e34', drawTicks: false },
+        title: { display: true, text: 'Index (2019 = 100)', color: '#c7c3bd' },
+      }
+    },
+      elements: { point: { radius: 3, hoverRadius: 6 }, line: { borderWidth: 2 } }
+    }
+  });
+})();
+
+
+(function() {
+  const ctx = document.getElementById('chart-1-2');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'bar',
+    data: {"labels": ["Croatia (2025 YoY)", "Greece (2024 YoY)", "Montenegro* (2024 est.)"], "datasets": [{"label": "Supply growth (%)", "data": [-0.8, 18.1, 6.0], "backgroundColor": "#6ea3c8"}, {"label": "Demand growth (%)", "data": [11.7, 16.5, 9.0], "backgroundColor": "#c8a46e"}]},
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      indexAxis: 'x',
+      interaction: { mode: 'nearest', intersect: false },
+      plugins: {
+        legend: {
+          display: true,
+          labels: { color: '#e8e6e1', font: { family: 'Inter Tight', size: 12 }, usePointStyle: true, boxWidth: 10 }
+        },
+        tooltip: {
+          backgroundColor: '#0e0f11',
+          borderColor: '#3a3f47',
+          borderWidth: 1,
+          titleColor: '#e8e6e1',
+          bodyColor: '#c7c3bd',
+          padding: 10,
+          displayColors: true,
+          boxPadding: 4
+        }
+      },
+    scales: {
+      x: {
+        stacked: false,
+        ticks: { color: '#9a9690' },
+        grid: { color: '#2a2e34', drawTicks: false },
+        
+      },
+      y: {
+        stacked: false,
+        ticks: { color: '#9a9690' },
+        grid: { color: '#2a2e34', drawTicks: false },
+        title: { display: true, text: 'Year-on-year change (%)', color: '#c7c3bd' },
+      }
+    },
+      elements: { point: { radius: 3, hoverRadius: 6 }, line: { borderWidth: 2 } }
+    }
+  });
+})();
+
+
+(function() {
+  const ctx = document.getElementById('chart-1-3');
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: 'bar',
+    data: {"labels": [2019, 2020, 2021, 2022, 2023, 2024], "datasets": [{"label": "\u20ac billion", "data": [27.1, 8.5, 14.0, 13.3, 16.9, 22.4], "backgroundColor": ["#6ea3c8", "#6ea3c8", "#6ea3c8", "#6ea3c8", "#6ea3c8", "#c8a46e"]}]},
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      indexAxis: 'x',
+      interaction: { mode: 'nearest', intersect: false },
+      plugins: {
+        legend: {
+          display: true,
+          labels: { color: '#e8e6e1', font: { family: 'Inter Tight', size: 12 }, usePointStyle: true, boxWidth: 10 }
+        },
+        tooltip: {
+          backgroundColor: '#0e0f11',
+          borderColor: '#3a3f47',
+          borderWidth: 1,
+          titleColor: '#e8e6e1',
+          bodyColor: '#c7c3bd',
+          padding: 10,
+          displayColors: true,
+          boxPadding: 4
+        }
+      },
+    scales: {
+      x: {
+        stacked: false,
+        ticks: { color: '#9a9690' },
+        grid: { color: '#2a2e34', drawTicks: false },
+        
+      },
+      y: {
+        stacked: false,
+        ticks: { color: '#9a9690' },
+        grid: { color: '#2a2e34', drawTicks: false },
+        title: { display: true, text: '€ billion', color: '#c7c3bd' },
+      }
+    },
+      elements: { point: { radius: 3, hoverRadius: 6 }, line: { borderWidth: 2 } }
+    }
+  });
+})();
+
+</script>
+</body>
+</html>
