@@ -5,6 +5,10 @@ permalink: /market-sentiment-analysis/
 author_profile: false
 ---
 
+> **English summary:** Real-time market sentiment analysis platform that monitors competitor activity, detects pricing changes and campaigns, and generates daily/weekly executive briefings with trend analysis and early warning alerts. Built with NLP and LLM-powered classification.
+
+---
+
 ## Miről szól?
 
 A **Market Sentiment Analysis** egy könnyen érthető, mégis profi megoldás a piacod „pulzusának” mérésére.  

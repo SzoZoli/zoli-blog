@@ -14,6 +14,8 @@ toc: true
 
 A three-part thought leadership series examining how artificial intelligence, PropTech, and data infrastructure are reshaping real estate markets across Central and Eastern Europe and the Western Balkans. Each paper combines regional market knowledge with data from Eurostat, the European Travel Commission, Deloitte, JLL, TEGoVA, RICS, the EBRD, and national statistics offices.
 
+*These are independent working papers. They are not peer-reviewed publications but represent original, source-attributed research intended for professional and investor audiences.*
+
 **Metrics:** 3 papers · 30+ verified data sources · 9 interactive charts · Available in HTML and DOCX
 
 #### Paper 1: Tourism Real Estate and AI-Based Hospitality
@@ -49,9 +51,12 @@ Multi-agent AI review system for EU AI Act compliance documentation. Built a pip
 
 ### Doctoral Research
 
-**Mezőgazdasági változások a Vajdaságban az elmúlt évtizedekben** (Agricultural Changes in Vojvodina Over Recent Decades)
+**Agricultural Changes in Vojvodina Over Recent Decades**
+*(Mezőgazdasági változások a Vajdaságban az elmúlt évtizedekben)*
 
-Absolutory thesis, University of Pécs, Faculty of Business and Economics, 2019.
+Absolutory thesis, University of Pécs (PTE), Faculty of Business and Economics, 2019.
 Supervisor: Prof. Dr. Kaposi Zoltán DSc.
 
-The research examines structural economic changes in Vojvodina's agricultural sector, including land ownership patterns, crop yields, regional disparities, and the impact of climate change. Chapter 8 explores the application of artificial intelligence to agricultural research: remote sensing, ML-based yield prediction, neural network climate analysis, and decision support systems for Vojvodinian agriculture.
+The research examines structural economic changes in Vojvodina's agricultural sector over several decades, covering land ownership patterns, crop yields (wheat and maize), regional disparities, and comparisons with Hungary and the EU. The thesis analyses the relationship between population dynamics and agricultural employment, state versus private land productivity, and national income trends.
+
+**Chapter 8 — AI Applications in Agricultural Research** explores the application of artificial intelligence to the research domain: remote sensing and land-use analysis, ML-based yield prediction models, neural network climate data analysis, decision support systems for Vojvodinian agriculture, and case studies from comparable flatland regions. This chapter bridges the doctoral work in regional economics with the applied AI competencies demonstrated elsewhere in this portfolio.

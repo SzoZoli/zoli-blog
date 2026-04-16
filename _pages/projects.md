@@ -15,6 +15,8 @@ toc: true
 #### miaudit.hu — EU AI Act Compliance Audit Platform
 **[→ miaudit.hu](https://miaudit.hu)**
 
+![miaudit.hu — EU AI Act Compliance Audit Platform](/zoli-blog/assets/images/miaudit-preview.png)
+
 Automated compliance assessment platform for organizations deploying AI systems under the EU AI Act. Users complete a structured questionnaire about their AI usage; the platform analyses compliance risks against 801 validated legal sources and generates a personalised report with an action plan and 90-day roadmap.
 
 | 801 | 7 | <24h |
@@ -28,6 +30,8 @@ Automated compliance assessment platform for organizations deploying AI systems 
 
 #### LifeAIPro — Multi-Agent AI Advisory SaaS
 **[→ lifeaipro.com](https://lifeaipro.com)**
+
+![LifeAIPro — Multi-Agent AI Advisory Platform](/zoli-blog/assets/images/lifeaipro-preview.png)
 
 Consumer-facing AI advisory platform with 4 domain-specific AI agents (Baby Advisor, GYM Coach, Mental Health Coach, Astrology Coach), each built on curated scientific knowledge bases. Serving users in Hungarian, English, and Serbian.
 

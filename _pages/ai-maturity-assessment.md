@@ -5,6 +5,10 @@ permalink: /ai-maturity-assessment/
 author_profile: false
 ---
 
+> **English summary:** AI readiness self-assessment framework for organisations. Based on established academic models (since 2000s), it evaluates data infrastructure, organisational culture, technical capabilities, and strategic alignment to determine AI adoption maturity level.
+
+---
+
 # AI Maturity Assessment – Önértékelés
 
 Szeretnéd megtudni, hogy a céged mennyire felkészült az AI bevezetésére?  
