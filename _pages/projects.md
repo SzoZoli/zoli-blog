@@ -23,6 +23,8 @@ Automated compliance assessment platform for organizations deploying AI systems 
 |-----|---|------|
 | Validated legal sources | Industry categories | Automated report delivery |
 
+**Compliance depth:** 801 validated legal sources · 22,418 text chunks · 49 categories · ISO 42001 mapping (38 Annex A controls) · 7 audit-ready documents
+
 **Stack:** Python · Streamlit · RAG · EU AI Act knowledge base
 **Status:** Live (Beta 0.1) · Last updated March 2026
 
@@ -41,6 +43,32 @@ Consumer-facing AI advisory platform with 4 domain-specific AI agents (Baby Advi
 
 **Stack:** RAG · Multi-agent architecture · Domain-specific knowledge bases
 **Status:** Live · Production SaaS with user registration and subscription
+
+---
+
+#### Mikra v2 — Agronomic Decision Support System
+
+Cross-lingual agronomic AI advisory system for Vojvodina (Serbia) farmers. Users ask in Hungarian or Serbian — the system returns pesticide recommendations with dosage, price comparison across 6 vendors, bee-safety warnings, and resistance rotation guidance.
+
+| 1,269 | 264 | 4,373 |
+|-------|-----|-------|
+| Products from 6 sources | Active ingredients (IRAC/FRAC/HRAC) | Structured dosages across 162 crops |
+
+**Stack:** Python · SQLite · ChromaDB · BGE-M3 · Streamlit
+**Status:** Live (April 2026) · Cross-lingual RAG (Hungarian query → Serbian documents) · Built in 2 days, 13 phases, 616 tests, 0 regressions
+
+---
+
+#### Government IT Document Intelligence (Anonymized)
+
+Document consolidation and AI-powered search system for a government IT directorate. Air-gapped deployment — all AI processing runs locally.
+
+| 8,473 | ~8 GB | 417 |
+|-------|-------|-----|
+| Files processed from SharePoint | Total volume | Duplicate clusters identified |
+
+**Stack:** Python · ChromaDB · FastAPI · Streamlit · Ollama/Qwen 2.5 · SharePoint Graph API
+**Status:** Active · Local LLM integration · Executive search UI
 
 ---
 

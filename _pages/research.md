@@ -35,7 +35,7 @@ How machine learning is changing residential valuation, developer unit-mix optim
 
 ---
 
-### AI Compliance — MintaBank Case Study
+### Cross-Regulation Compliance Review (Anonymized European Mid-Cap Bank)
 
 Multi-agent AI review system for EU AI Act compliance documentation. Built a pipeline of 5 AI reviewers (legal, compliance, regulatory, CISO, CEO perspectives) that evaluates and iteratively improves compliance documentation packages.
 
@@ -46,6 +46,19 @@ Multi-agent AI review system for EU AI Act compliance documentation. Built a pip
 **Result:** Documentation quality improved from 4.7/10 to 6.96/10 across two automated iterations. Identified 11 consensus gaps across legal, operational, and bank-specific dimensions.
 
 **Stack:** Python · Multi-agent architecture · GDPR/AI Act/DORA/NIS2 cross-referencing · Automated scoring
+
+---
+
+### Wetland Reconstruction AI — Bugac Pilot (Homokhátság)
+
+19th-century wetland reconstruction from Habsburg II Military Survey tiles using deep learning (U-Net + ResNet50). Bugac pilot: 792 km², 14 LISA HH cells, 42.5 km² rewetting priority zones identified.
+
+- Nature Restoration Law compliance application
+- Satellite-era validation against CORINE 2018
+- MCDA-based prioritization for stakeholder review
+
+**Stack:** Python · PyTorch · U-Net · ResNet50 · rasterio · geopandas
+**Status:** HGB Submission Ready
 
 ---
 

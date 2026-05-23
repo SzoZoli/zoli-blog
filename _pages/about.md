@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 ## Szombathy Zoltán
-**PhD Candidate in Economics · Applied AI Analyst**
+**PhD Candidate in Economics · EU AI Act Compliance & Applied AI**
 
 Doctoral researcher at the University of Pécs (PTE), Faculty of Business and Economics, focused on regional economic changes in Vojvodina (Serbia) under the supervision of Prof. Dr. Kaposi Zoltán DSc. My research sits at the intersection of regional economics, agricultural transformation, and the application of artificial intelligence to economic analysis.
 
@@ -24,7 +24,7 @@ Beyond academic research, I build AI-powered platforms for regulatory compliance
 
 ### Technical stack
 
-Python · Streamlit · RAG · LangChain · Multi-agent systems · Jekyll · Chart.js · Pandas · Matplotlib · NLP/LLM integration
+AI Compliance · EU AI Act · Regulatory Compliance · ISO 42001 · Python · Streamlit · RAG · LangChain · Multi-agent systems · Jekyll · Chart.js · Pandas · Matplotlib · NLP/LLM integration
 
 ### Education
 
