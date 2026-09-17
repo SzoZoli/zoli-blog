@@ -49,16 +49,13 @@ Multi-agent AI review system for EU AI Act compliance documentation. Built a pip
 
 ---
 
-### Wetland Reconstruction AI — Bugac Pilot (Homokhátság)
+### Historical Wetland Reconstruction — Bugac Study Area (Homokhátság)
 
-19th-century wetland reconstruction from Habsburg II Military Survey tiles using deep learning (U-Net + ResNet50). Bugac pilot: 792 km², 14 LISA HH cells, 42.5 km² rewetting priority zones identified.
+Machine-based reconstruction of historical wetlands from the Habsburg Second Military Survey in the Bugac study area of the Homokhátság (Sand Ridge), Hungary.
 
-- Nature Restoration Law compliance application
-- Satellite-era validation against CORINE 2018
-- MCDA-based prioritization for stakeholder review
+**Methods:** Deep-learning semantic segmentation · Spatial statistics
 
-**Stack:** Python · PyTorch · U-Net · ResNet50 · rasterio · geopandas
-**Status:** HGB Submission Ready
+**Status:** Manuscript under submission for peer-reviewed publication
 
 ---
 
